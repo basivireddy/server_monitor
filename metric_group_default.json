@@ -1,0 +1,60 @@
+{
+  "application": "opsmxapi",
+  "services":
+  	[
+		  {	
+		  		"name":"System",
+		  		"groups": 
+		  			[ 
+				  		{
+				  			"group":"IO KPI",
+				  			"metrics":[
+							  { "name":"system.disk.blocks.write", "aggregator":"avg" , "duration": 10},
+					  		  { "name":"system.disk.blocks.read","aggregator":"avg" , "duration": 10}
+				  		]
+				  		},
+				  		{
+				  			"group":"Memory Group",
+				  			"metrics": [
+					  			{ "name": "system.mem.swap.in","aggregator":"avg" , "duration": 10},
+					  			{ "name": "system.mem.swap.total","aggregator":"avg" , "duration": 10},
+					  			{ "name": "system.mem.util","aggregator":"avg" , "duration": 10},
+					  			{ "name": "system.mem.swap.out","aggregator":"avg" , "duration": 10}
+				  			]
+				  		},
+				  		{
+				  			"group":"Network Group",
+				  			"metrics": [
+					  			{ "name": "system.net.bytes_send","aggregator":"avg" , "duration": 10},
+								{ "name": "system.net.packets_in.error","aggregator":"count" , "duration": 10},
+								{ "name": "system.net.bytes_rcvd","aggregator":"avg" , "duration": 10},
+								{ "name": "system.net.packets_out.drops","aggregator":"count" , "duration": 10},
+								{ "name": "system.net.packets_in.drops","aggregator":"count" , "duration": 10},
+								{ "name": "system.net.received_rate","aggregator":"avg" , "duration": 10},
+								{ "name": "system.net.packets_out.error","aggregator":"count" , "duration": 10},
+								{ "name": "system.net.transmit_rate","aggregator":"rate" , "duration": 10}
+				  			]
+				  		},
+				  		{
+				  			"group":"Compute KPI",
+				  			"metrics": [
+					  			{ "name": "system.cpu.util","aggregator":"avg" , "duration": 10},
+								{ "name": "system.cpu.numprocesswaiting","aggregator":"count" , "duration": 10},
+								{ "name": "system.io.numprocesswaiting","aggregator":"count" , "duration": 10},
+								{ "name": "system.cpu.iowait","aggregator":"avg" , "duration": 10}
+				  			]
+				  		},
+				  		{
+				  			"group":"Service KPI",
+				  			"metrics": [
+					  			{ "name": "http.requests","aggregator":"avg" , "duration": 10},
+					  			{ "name": "http.responsetime","aggregator":"avg" , "duration": 10},
+					  			{ "name": "http.bytes_read","aggregator":"avg" , "duration": 10}
+					  			
+				  			]
+				  		}
+				  			
+		  			]
+		  }
+	]
+}	
